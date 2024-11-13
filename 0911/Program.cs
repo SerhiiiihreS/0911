@@ -78,6 +78,10 @@
                                     }
                                 }
                                 break;
+                            default:
+                                Console.Clear();
+                                Console.WriteLine("Нет таког пункта!!!");
+                                break;
                         }
                         break;
                     case "4":

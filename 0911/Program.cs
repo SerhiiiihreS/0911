@@ -43,18 +43,42 @@
                     case "3":
                         Console.Clear();
                         Console.WriteLine("Изменение данных");
-                        Console.WriteLine("Введите логин для изменения -> ");
-                        string log2 = Console.ReadLine();
-                        Console.WriteLine("Введите  новый пароль");
-                        string pass2 = Console.ReadLine();
-                        foreach (var a2 in Data.Keys)
+                        Console.WriteLine("Изменить логин -11");
+                        Console.WriteLine("Изменить пароль -22");
+                        string f;
+                        f = Console.ReadLine();
+                        switch (f)
                         {
-                            if (a2 == log2)
-                            {
-                                Data[a2]=pass2 ;
-                            }
+                            case "11":
+                                Console.Clear();
+                                Console.WriteLine("Введите логин для изменения -> ");
+                                string log2 = Console.ReadLine();
+                                Console.WriteLine("Введите  новый логин -> ");
+                                string log22 = Console.ReadLine();
+                                foreach (var a2 in Data.Keys)
+                                {
+                                    if (a2 == log2)
+                                    {
+                                        Data.Add(log22, Data[a2]);
+                                        Data.Remove(a2);
+                                    }
+                                }
+                                break;
+                            case "22":
+                                Console.Clear();
+                                Console.WriteLine("Введите логин для изменения -> ");
+                                string log24 = Console.ReadLine();
+                                Console.WriteLine("Введите  новый пароль -> ");
+                                string pass2 = Console.ReadLine();
+                                foreach (var a2 in Data.Keys)
+                                {
+                                    if (a2 == log24)
+                                    {
+                                        Data[a2]=pass2 ;
+                                    }
+                                }
+                                break;
                         }
-
                         break;
                     case "4":
                         Console.Clear();
